@@ -1,6 +1,7 @@
 export type ID = string
 
 export interface Todo {
+  id: ID
   text: string
   done: boolean
 }
@@ -16,20 +17,15 @@ export interface Actions {
 // }
 
 export interface Add {
-  done: boolean
-  setDone: (done: boolean) => void
-  text: string
-  setText: (v: string) => void
-  submit: Todo
-  setSubmit: (item: Todo) => void
-  add: (item: Todo) => void
+  completeAll: boolean
+  setCompleteAll: (done: boolean) => void
+  list: Todo[]
+  setList: (list: Todo[]) => void
 }
 
 export interface TodoItem {
   list: Todo[]
   setCompleted: (list: Todo[]) => void
-  text: string
-  done: boolean
-  id: number
+  todo: Todo
   del: (l: Todo[]) => void
 }

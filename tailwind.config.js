@@ -6,8 +6,10 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: ['checked'],
       borderColor: ['checked'],
+      backgroundColor: ['active', 'checked'],
+      ringWidth: ['hover', 'active'],
+      ringColor: ['hover', 'active'],
     },
   },
   plugins: [],
